@@ -9,10 +9,12 @@ class Menu extends Phaser.Scene {
         this.load.path = "./assets/";
 
         // load images
+        this.load.image('menuArt', 'img/menuArt.png');
         this.load.image('dialogbox', 'img/dialogbox.png');
         this.load.image('cop', 'img/cop.png');
         this.load.image('faye', 'img/faye.png');
         this.load.image('foodStand0', 'img/foodStand0.png');
+        
 
         // load font
         this.load.bitmapFont('Piacevoli', 'font/Piacevoli_Font.png', 'font/Piacevoli_Font.xml');
@@ -36,22 +38,22 @@ class Menu extends Phaser.Scene {
 
     create() 
     {
-        // // menu art
-        // const menuConfig = 
-        // {
-        //     key: 'menuArt',
-        //     x: game.config.width/2,
-        //     y: game.config.height/2
-        // };
+        // menu art
+        const menuConfig = 
+        {
+            key: 'menuArt',
+            x: game.config.width/2,
+            y: game.config.height/2
+        };
 
-        // // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/game%20objects/sprites/create%20from%20config.js
-        // this.make.sprite(menuConfig);
+        // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/game%20objects/sprites/create%20from%20config.js
+        this.make.sprite(menuConfig);
 
         // set up audio, play bgm
         this.bgm = this.sound.add('backgroundMusic', 
         { 
             mute: false,
-            volume: 0.5,
+            volume: 1,
             rate: 1,
             loop: true 
         });
@@ -180,7 +182,7 @@ class Menu extends Phaser.Scene {
         emitter.addEmitZone({ type: 'edge', source: shape44, quantity: 64, total: 64 });
         emitter.addEmitZone({ type: 'edge', source: shape45, quantity: 64, total: 64 });
 
-        this.clock = this.time.delayedCall(21000, () => 
+        this.clock = this.time.delayedCall(12000, () => 
         {
             // add title screen text
             let title01 = this.add.bitmapText(centerX, centerY + paddingSize, 'Piacevoli', 'CHUNGKING EXPRESS', 64).setOrigin(0.5).setTint(0xffffff);
