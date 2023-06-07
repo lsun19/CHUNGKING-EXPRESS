@@ -3,6 +3,7 @@ class PlayOne extends Phaser.Scene
     constructor() 
     {
         super("playScene1");
+        
     }
 
     preload() 
@@ -14,11 +15,6 @@ class PlayOne extends Phaser.Scene
     
     create() 
     {
-        this.sceneOver = false;
-
-        // define keys
-        keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
-        keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);   
 
 
         // this.countdown = this.add.text(320, 32);

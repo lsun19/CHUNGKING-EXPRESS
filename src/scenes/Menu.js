@@ -9,10 +9,19 @@ class Menu extends Phaser.Scene {
         this.load.path = "./assets/";
 
         // load images
-        // this.load.image('', 'img/.png');
+        this.load.image('dialogbox', 'img/dialogbox.png');
+        this.load.image('cop', 'img/cop.png');
+        this.load.image('faye', 'img/faye.png');
+        this.load.image('foodStand0', 'img/foodStand0.png');
 
         // load font
         this.load.bitmapFont('Piacevoli', 'font/Piacevoli_Font.png', 'font/Piacevoli_Font.xml');
+
+        // load JSON (dialog)
+        this.load.json('dialog', 'json/dialog.json');
+
+        // load audio
+        this.load.audio('backgroundMusic', 'audio/California Dreamin.wav');
 
         // load spritesheet for vfx
         this.load.spritesheet('neon', 'vfx/neon.png', {
@@ -37,6 +46,17 @@ class Menu extends Phaser.Scene {
 
         // // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/game%20objects/sprites/create%20from%20config.js
         // this.make.sprite(menuConfig);
+
+        // set up audio, play bgm
+        this.bgm = this.sound.add('backgroundMusic', 
+        { 
+            mute: false,
+            volume: 0.5,
+            rate: 1,
+            loop: true 
+        });
+
+        this.bgm.play();
 
         // adapted from Phaser 3 example: https://labs.phaser.io/view.html?src=src/game%20objects/particle%20emitter/add%20emit%20zone.js
         // shape for "CHUNG"
@@ -222,7 +242,7 @@ class Menu extends Phaser.Scene {
 
             startButton.once('pointerdown', () => 
             {
-                
+                this.scene.start('cutScene1');
             });
 
             achievementButton.setInteractive
@@ -242,7 +262,8 @@ class Menu extends Phaser.Scene {
 
             achievementButton.once('pointerdown', () => 
             {
-                
+                this.scene.run('achievementScene')
+                this.bgm.stop();
             });
 
             creditsButton.setInteractive
@@ -262,7 +283,8 @@ class Menu extends Phaser.Scene {
 
             creditsButton.once('pointerdown', () => 
             {
-                
+                this.scene.run('creditScene')
+                this.bgm.stop();
             });
 
         }, null, this);
@@ -273,6 +295,9 @@ class Menu extends Phaser.Scene {
         // keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
         // keyU = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.U);
 
+
+        // create input
+        cursors = this.input.keyboard.createCursorKeys();
     }
 
     update()

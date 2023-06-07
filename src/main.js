@@ -8,7 +8,7 @@
         Play Music          : https://github.com/photonstorm/phaser3-examples/blob/master/public/src/audio/Web%20Audio/play%20audio%20file.js
         Menu&End Bitmap     : https://github.com/nathanaltice/Paddle-Parkour-P360
         FSM                 : https://github.com/nathanaltice/FSM
-        "Piacevoli" Font : https://fontenddev.com/fonts/piacevoli/
+        "Piacevoli" Font    : https://fontenddev.com/fonts/piacevoli/
         Loading Bar         : https://rexrainbow.github.io/phaser3-rex-notes/docs/site/loader/
 
     
@@ -42,7 +42,7 @@ let config =
             }
         }
     },
-    scene   : [ Menu, PlayOne, PlayTwo, PlayThree, Over ] 
+    scene   : [ Menu, Achievement, Credits, CutOne, CutTwo, CutThree, CutFour, CutFive, PlayOne, PlayTwo, PlayThree, Over ] 
 }
 
 let game = new Phaser.Game(config);
@@ -61,3 +61,5 @@ let level;
 
 // reserve keyboard variables
 let keyW, keyA, keyS, keyD, keyY, keyU, keyI, keyO, keyP, keyF;
+
+let cursors = null;
