@@ -1,4 +1,4 @@
-class Salad extends Phaser.Physics.Arcade.Sprite 
+class Chips extends Phaser.Physics.Arcade.Sprite
 {
     constructor(scene, x, y, moveSpeed, texture, frame) 
     {
@@ -10,9 +10,9 @@ class Salad extends Phaser.Physics.Arcade.Sprite
 
     update() 
     {
-
+    
     }
-
+    
     reset() 
     {
         this.x = Math.random() * wdth;

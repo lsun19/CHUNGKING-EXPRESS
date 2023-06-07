@@ -48,16 +48,19 @@ let config =
 let game = new Phaser.Game(config);
 
 // def globals for positioning
-let centerX = game.config.width/2;
-let centerY = game.config.height/2;
-let wdth = game.config.width;
-let hght = game.config.height;
-const textSpacer  = 64;
-const paddingSize = 100;
+let centerX         = game.config.width/2;
+let centerY         = game.config.height/2;
+let wdth            = game.config.width;
+let hght            = game.config.height;
+const textSpacer    = 64;
+const paddingSize   = 100;
 
 
 // def globals for functional var
-let level;
+let purchaseCmplt   = false;
+let purchaseDate    = 1;
+let saladCount      = 0;
+let firstTimer      = 15000;
 
 // reserve keyboard variables
 let keyW, keyA, keyS, keyD, keyY, keyU, keyI, keyO, keyP, keyF;

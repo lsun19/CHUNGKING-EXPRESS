@@ -1,23 +1,43 @@
 [
 	[
 		{
-			"speaker" : "cop",
-			"dialog" : "See now, how men lay blame upon us gods for what is after all nothing but their own folly.",
+			"speaker" : "faye",
+			"dialog" : "(singing) California dreamin', on such a winter's day...",
 			"newSpeaker" : "true"
 		},
 		{	
+			"speaker" : "cop",
+			"dialog" : "You like this kind of music?",
+			"newSpeaker" : "true"
+		},
+				{
 			"speaker" : "faye",
-			"dialog" : "Father, son of Saturn, King of kings, it served Aegisthus right, and so it would any one else who does as he did; but Aegisthus is neither here nor there.",
+			"dialog" : "Nah, I just enjoy being around loud music. It somehow brings me peace of mind. Back for your usual?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Yes, the Chef's Salad, please.",
+			"newSpeaker" : "true"
+		},
+				{
+			"speaker" : "faye",
+			"dialog" : "You know, you should try something different once in a while. We've got some delicious fish & chips and pizzas on the menu too.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "I appreciate the suggestion, but the Chef's Salad never fails to put a smile on my girlfriend's face.",
 			"newSpeaker" : "true"
 		},
 		{
-			"speaker" : "cop",
-			"dialog" : "See now, how men lay blame upon us gods for what is after all nothing but their own folly.",
+			"speaker" : "faye",
+			"dialog" : "I understand, but why not spice things up occasionally? How about getting both the salad and the chips? Your girlfriend might appreciate the variety.",
 			"newSpeaker" : "true"
 		},
 		{	
-			"speaker" : "faye",
-			"dialog" : "Father, son of Saturn, King of kings, it served Aegisthus right, and so it would any one else who does as he did; but Aegisthus is neither here nor there.",
+			"speaker" : "cop",
+			"dialog" : "Nah, maybe next time.",
 			"newSpeaker" : "true"
 		}
 	]

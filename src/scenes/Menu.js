@@ -180,7 +180,7 @@ class Menu extends Phaser.Scene {
         emitter.addEmitZone({ type: 'edge', source: shape44, quantity: 64, total: 64 });
         emitter.addEmitZone({ type: 'edge', source: shape45, quantity: 64, total: 64 });
 
-        this.clock = this.time.delayedCall(1000, () => 
+        this.clock = this.time.delayedCall(21000, () => 
         {
             // add title screen text
             let title01 = this.add.bitmapText(centerX, centerY + paddingSize, 'Piacevoli', 'CHUNGKING EXPRESS', 64).setOrigin(0.5).setTint(0xffffff);
