@@ -11,6 +11,9 @@ class Menu extends Phaser.Scene {
         // load images
         // this.load.image('', 'img/.png');
 
+        // load font
+        this.load.bitmapFont('Piacevoli', 'font/Piacevoli_Font.png', 'font/Piacevoli_Font.xml');
+
         // load spritesheet for vfx
         this.load.spritesheet('neon', 'vfx/neon.png', {
             frameWidth: 16,
@@ -94,9 +97,10 @@ class Menu extends Phaser.Scene {
 
         const emitter = this.add.particles(400, 250, 'neon', {
             frame: {
-                frames: [2, 3, 4]
+                frames: [1, 2, 3]
             },
             lifespan: { min: 10, max: 50000, steps: 250 },
+            yoyo: true,
             quantity: 1,
             scale: { start: 1, end: 0.5 }
         });
@@ -156,6 +160,112 @@ class Menu extends Phaser.Scene {
         emitter.addEmitZone({ type: 'edge', source: shape44, quantity: 64, total: 64 });
         emitter.addEmitZone({ type: 'edge', source: shape45, quantity: 64, total: 64 });
 
+        this.clock = this.time.delayedCall(1000, () => 
+        {
+            // add title screen text
+            let title01 = this.add.bitmapText(centerX, centerY + paddingSize, 'Piacevoli', 'CHUNGKING EXPRESS', 64).setOrigin(0.5).setTint(0xffffff);
+            let title02 = this.add.bitmapText(centerX, centerY + paddingSize, 'Piacevoli', 'CHUNGKING EXPRESS', 64).setOrigin(0.5).setTint(0xff0000).setBlendMode('SCREEN');
+
+            // title text tweens https://github.com/nathanaltice/Paddle-Parkour-P360
+            let yoyoTweenA = this.tweens.add
+            ({
+                targets: title01,
+                duration: 2500,
+                angle: { from: -1, to: 1 },
+                yoyo: true,
+                repeat: -1
+            });
+
+            yoyoTweenA.on('yoyo', () => { this.cameras.main.shake(100, 0.0025); });
+            let yoyoTweenB = this.tweens.add
+            ({
+                targets: title02,
+                duration: 2500,
+                angle: { from: 1, to: -1 },
+                yoyo: true,
+                repeat: -1
+            });
+            yoyoTweenB.on('yoyo', () => { this.cameras.main.shake(100, 0.0025); });
+
+            // glowing bitmap https://github.com/photonstorm/phaser3-examples/blob/master/public/src/fx/glow/glow%20bitmaptext.js
+            const fx1 = title01.postFX.addGlow(0xff0000, 0, 0, false, 0.1, 10);
+
+            this.tweens.add
+            ({
+                targets: fx1,
+                outerStrength: 4,
+                yoyo: true,
+                loop: -1,
+                ease: 'sine.inout'
+            });
+
+            this.add.bitmapText(centerX, hght - textSpacer*2, 'Piacevoli', 'LIYU SUN', 32).setOrigin(0.5);
+
+            let startButton = this.add.bitmapText(centerX - textSpacer*3, hght - textSpacer, 'Piacevoli', 'START', 40).setOrigin(0.5).setTint(0x81007f);
+            let achievementButton = this.add.bitmapText(centerX, hght - textSpacer, 'Piacevoli', 'ACHIEVEMENT', 40).setOrigin(0.5).setTint(0x81007f);
+            let creditsButton = this.add.bitmapText(centerX + textSpacer*3, hght - textSpacer, 'Piacevoli', 'CREDITS', 40).setOrigin(0.5).setTint(0x81007f);
+
+            startButton.setInteractive
+            ({
+                useHandCursor: true,
+            });
+
+            startButton.on('pointermove', () => 
+            {
+                startButton.setTint(0xffffff);
+
+                this.clock = this.time.delayedCall(500, () => 
+                {
+                    startButton.setTint(0x81007f);
+                }, null, this);
+            }, this);
+
+            startButton.once('pointerdown', () => 
+            {
+                
+            });
+
+            achievementButton.setInteractive
+            ({
+                useHandCursor: true,
+            });
+
+            achievementButton.on('pointermove', () => 
+            {
+                achievementButton.setTint(0xffffff);
+
+                this.clock = this.time.delayedCall(500, () => 
+                {
+                    achievementButton.setTint(0x81007f);
+                }, null, this);
+            }, this);
+
+            achievementButton.once('pointerdown', () => 
+            {
+                
+            });
+
+            creditsButton.setInteractive
+            ({
+                useHandCursor: true,
+            });
+
+            creditsButton.on('pointermove', () => 
+            {
+                creditsButton.setTint(0xffffff);
+
+                this.clock = this.time.delayedCall(500, () => 
+                {
+                    creditsButton.setTint(0x81007f);
+                }, null, this);
+            }, this);
+
+            creditsButton.once('pointerdown', () => 
+            {
+                
+            });
+
+        }, null, this);
 
         // define keys
         // keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);

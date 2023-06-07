@@ -8,7 +8,7 @@
         Play Music          : https://github.com/photonstorm/phaser3-examples/blob/master/public/src/audio/Web%20Audio/play%20audio%20file.js
         Menu&End Bitmap     : https://github.com/nathanaltice/Paddle-Parkour-P360
         FSM                 : https://github.com/nathanaltice/FSM
-        "PressStart2P" Font : https://www.fontsc.com/font/press-start-2p
+        "Piacevoli" Font : https://fontenddev.com/fonts/piacevoli/
         Loading Bar         : https://rexrainbow.github.io/phaser3-rex-notes/docs/site/loader/
 
     
