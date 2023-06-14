@@ -52,7 +52,7 @@ class CutOne extends Phaser.Scene
         this.make.sprite(menuConfig);
 
         // parse dialog from JSON file
-        this.dialog = this.cache.json.get('dialog');
+        this.dialog = this.cache.json.get('dialog1');
         //console.log(this.dialog);
 
         // add dialog box sprite
@@ -94,7 +94,7 @@ class CutOne extends Phaser.Scene
 
         nextButton.once('pointerdown', () => 
         {
-            this.scene.start('playScene1');
+            this.scene.start('playScene2');
         });
  
     }

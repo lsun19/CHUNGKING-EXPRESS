@@ -1,0 +1,44 @@
+[
+	[
+		{
+			"speaker" : "faye",
+			"dialog" : "Want to try something different again?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "No, thanks. Just black coffee.",
+			"newSpeaker" : "true"
+		},
+				{
+			"speaker" : "faye",
+			"dialog" : "Nothing for your girlfriend?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "She left.",
+			"newSpeaker" : "true"
+		},
+				{
+			"speaker" : "faye",
+			"dialog" : "Why?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Said she wanted to try some new dishes. I guess she's right. There are plenty of choices in men, just like in food.",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "It's no big deal. She'll try someone else and realize you're better. She'll come running back. Don't worry.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Thanks.",
+			"newSpeaker" : "true"
+		}
+	]
+]

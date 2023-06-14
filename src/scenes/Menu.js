@@ -20,7 +20,9 @@ class Menu extends Phaser.Scene {
         this.load.bitmapFont('Piacevoli', 'font/Piacevoli_Font.png', 'font/Piacevoli_Font.xml');
 
         // load JSON (dialog)
-        this.load.json('dialog', 'json/dialog.json');
+        this.load.json('dialog1', 'json/dialog1.json');
+        this.load.json('dialog2', 'json/dialog2.json');
+        this.load.json('dialog3', 'json/dialog3.json');
 
         // load audio
         this.load.audio('backgroundMusic', 'audio/California Dreamin.wav');
@@ -182,7 +184,7 @@ class Menu extends Phaser.Scene {
         emitter.addEmitZone({ type: 'edge', source: shape44, quantity: 64, total: 64 });
         emitter.addEmitZone({ type: 'edge', source: shape45, quantity: 64, total: 64 });
 
-        this.clock = this.time.delayedCall(12000, () => 
+        this.clock = this.time.delayedCall(2000, () => 
         {
             // add title screen text
             let title01 = this.add.bitmapText(centerX, centerY + paddingSize, 'Piacevoli', 'CHUNGKING EXPRESS', 64).setOrigin(0.5).setTint(0xffffff);

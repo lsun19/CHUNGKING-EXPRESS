@@ -1,0 +1,39 @@
+[
+	[
+		{
+			"speaker" : "faye",
+			"dialog" : "Excuse me. The policeman who buys a chef's salad here every night...",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "You mean No. 633? He's off today.",
+			"newSpeaker" : "true"
+		},
+				{
+			"speaker" : "faye",
+			"dialog" : "Isn't he off on Saturdays?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "He changed shifts. Didn't he tell you?",
+			"newSpeaker" : "true"
+		},
+				{
+			"speaker" : "faye",
+			"dialog" : "If you see him again, could you please give him this?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Sure, no problem.",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "Thank you.",
+			"newSpeaker" : "true"
+		}
+	]
+]

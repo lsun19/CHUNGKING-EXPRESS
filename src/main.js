@@ -62,6 +62,14 @@ let purchaseDate    = 1;
 let saladCount      = 0;
 let firstTimer      = 15000;
 
+let typeTimeOut     = false;
+let firstAnsFin     = false;
+let secondAnsFin    = false;
+let thirdAnsFin     = false;
+let firstAns        = false;
+let secondAns       = false;
+let thirdAns       = false;
+
 // reserve keyboard variables
 let keyW, keyA, keyS, keyD, keyY, keyU, keyI, keyO, keyP, keyF;
 
