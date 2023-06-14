@@ -110,11 +110,30 @@ class PlayOne extends Phaser.Scene
 
             if(saladCount == (purchaseDate - 1))
             {
-                this.add.bitmapText(centerX, hght - textSpacer, 'Piacevoli', 'ACHIEVEMENT UNLOCKED: Loyalty', 40).setOrigin(0.5).setTint(0x81007f);
+                let achvmtOne = this.add.bitmapText(centerX, hght - textSpacer, 'Piacevoli', 'ACHIEVEMENT UNLOCKED: Loyalty', 40).setOrigin(0.5).setTint(0x81007f).setAlpha(0);
+                
+                this.tweens.add
+                ({
+                    targets: achvmtOne,
+                    alphaTopLeft: { value: 1, duration: 4000, ease: 'Power1' },
+                    alphaBottomRight: { value: 1, duration: 4000, ease: 'Power1' },
+                    alphaBottomLeft: { value: 1, duration: 4000, ease: 'Power1'},
+                    yoyo: false,
+                    loop: 0
+                });
             }
             if(saladCount == 0)
             {
-                this.add.bitmapText(centerX, hght - textSpacer, 'Piacevoli', 'ACHIEVEMENT UNLOCKED: Playboy', 40).setOrigin(0.5).setTint(0x81007f);
+                let achvmtTwo = this.add.bitmapText(centerX, hght - textSpacer, 'Piacevoli', 'ACHIEVEMENT UNLOCKED: Playboy', 40).setOrigin(0.5).setTint(0x81007f).setAlpha(0);
+                this.tweens.add
+                ({
+                    targets: achvmtTwo,
+                    alphaTopLeft: { value: 1, duration: 4000, ease: 'Power1' },
+                    alphaBottomRight: { value: 1, duration: 4000, ease: 'Power1' },
+                    alphaBottomLeft: { value: 1, duration: 4000, ease: 'Power1'},
+                    yoyo: false,
+                    loop: 0
+                });
             }
             this.clock = this.time.delayedCall(3000, () => 
             {

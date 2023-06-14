@@ -389,6 +389,20 @@ class PlayTwo extends Phaser.Scene
 
             if(firstAnsFin && secondAnsFin && thirdAnsFin)
             {
+                if(firstAns && secondAns && thirdAns)
+                {
+                    let achvmtThree = this.add.bitmapText(centerX, hght - textSpacer, 'Piacevoli', 'ACHIEVEMENT UNLOCKED: sad boi', 40).setOrigin(0.5).setTint(0x81007f);
+                    this.tweens.add
+                    ({
+                        targets: achvmtThree,
+                        alphaTopLeft: { value: 1, duration: 4000, ease: 'Power1' },
+                        alphaBottomRight: { value: 1, duration: 4000, ease: 'Power1' },
+                        alphaBottomLeft: { value: 1, duration: 4000, ease: 'Power1'},
+                        yoyo: false,
+                        loop: 0
+                    });
+                }
+
                 this.clock = this.time.delayedCall(3000, () => 
                 {
                     this.scene.start('cutScene3');
