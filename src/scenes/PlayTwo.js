@@ -9,6 +9,9 @@ class PlayTwo extends Phaser.Scene
     
     create() 
     {
+        // update instruction text
+        document.getElementById('text').innerHTML = 'Type your answer and press space to continue';
+
         cursors = this.input.keyboard.createCursorKeys();
 
         // menu art
@@ -36,7 +39,7 @@ class PlayTwo extends Phaser.Scene
                 'You were so chubby before.',
                 'Now look at yourself.',
                 'You\'re so skinny.',
-                'Have more confidence in yourself, Mrs.____'
+                'Have more confidence in yourself, Mrs.S___'
             ];
 
             const textOne = this.add.text(400, 300, message[line], { fontFamily: 'Bradley Hand ITC', fontSize: 40 });
@@ -133,7 +136,7 @@ class PlayTwo extends Phaser.Scene
                 'You\'re so limp and shapeless.',
                 'Look at you.',
                 'I\'ll help you.',
-                'There. Isn\'t that more comfy, Miss._____?',
+                'There. Isn\'t that more comfy, Miss.T____?',
             ];
 
             const textOne = this.add.text(400, 300, message[line], { fontFamily: 'Bradley Hand ITC', fontSize: 40 });
@@ -228,7 +231,7 @@ class PlayTwo extends Phaser.Scene
                 'Feeling lonely?',
                 'You\'re a real mess.',
                 'Feelin cold?',
-                'I\'ll warm you up., Miss._____',
+                'I\'ll warm you up., Miss.B____',
             ];
 
             const textOne = this.add.text(400, 300, message[line], { fontFamily: 'Bradley Hand ITC', fontSize: 40 });

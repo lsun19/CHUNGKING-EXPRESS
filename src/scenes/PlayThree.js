@@ -30,6 +30,8 @@ class PlayThree extends Phaser.Scene
     
     create() 
     {
+        document.getElementById('text').innerHTML = 'Use ↑↓←→ to move & press space to interact';
+
         const map = this.add.tilemap('tilemapJSON')
         const tileset = map.addTilesetImage('tileset', 'tilesetImage')
         
@@ -46,6 +48,9 @@ class PlayThree extends Phaser.Scene
         this.cam2 = this.cameras.add(405, 5, 390, 290);
         this.cam3 = this.cameras.add(5, 305, 390, 290);
         this.cam4 = this.cameras.add(405, 305, 390, 290);
+
+        this.cam2.fade(2000);
+        this.cam4.setAlpha(0.1);
 
         // add player
         this.faye = this.physics.add.sprite(189, 252, 'faye_atlas', 0);
@@ -143,6 +148,14 @@ class PlayThree extends Phaser.Scene
     update() 
     {
         this.countdown.setText(`Time Left: ${parseFloat(firstTimer/1000 - ((this.timedEvent.getProgress())*(firstTimer/1000))).toFixed(2)}`);
+
+        if (this.cam2.fadeEffect.alpha >= 1)
+        {
+            this.cam2.fadeEffect.alpha = 0;
+            this.cam2.fade(2000);
+        }
+
+        this.cam3.shake(60000, 0.0025);
 
         this.direction = new Phaser.Math.Vector2(0);
         if(this.cursors.left.isDown)

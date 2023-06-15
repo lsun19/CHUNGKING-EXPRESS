@@ -99,7 +99,8 @@ class PlayOne extends Phaser.Scene
         }, null, this);
         /************************************************************  set up timed event ************************************************************/
 
- 
+        // update instruction text
+        document.getElementById('text').innerHTML = 'Left click to choose the item to buy';
     }
 
     update() 
@@ -124,7 +125,7 @@ class PlayOne extends Phaser.Scene
             }, null, this);
         }
 
-        if(purchaseDate > 29)
+        if(purchaseDate > 5)
         {
             this.chefSalad.destroy();
             this.chipsGroup.setVisible(false);

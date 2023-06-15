@@ -6,9 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHUNGKING EXPRESS</title>
     <style>
-        body 
-        {
-            background-color: rgb(30, 30, 30);
+        body {
+            background-color: rgb(50, 50, 50);
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+        .container {
+            border-top: 1px solid rgb(90, 90, 90);
+            padding: 10px;
+            background-color: rgb(95, 95, 95);
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            color: rgb(225, 225, 225);
+            font: Arial;
         }
     </style>
     <script src = "./lib/phaser.js"></script>
@@ -30,6 +43,9 @@
     <script src = "./src/main.js"></script>
 </head>
 <body>
+    <div class="container">
+    <h1><span id="text"></span></h1>
+    </div>
     <div id="phaser-game"></div>
     <span id="info"></span>
 </body>
