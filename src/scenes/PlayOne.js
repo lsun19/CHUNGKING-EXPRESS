@@ -125,7 +125,7 @@ class PlayOne extends Phaser.Scene
             }, null, this);
         }
 
-        if(purchaseDate > 5)
+        if(purchaseDate > 20)
         {
             this.chefSalad.destroy();
             this.chipsGroup.setVisible(false);
