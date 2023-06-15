@@ -102,7 +102,8 @@ class PlayTwo extends Phaser.Scene
             });
 
             // watch for keycombomatches
-            this.input.keyboard.on('keycombomatch', (combo, event) => {
+            this.input.keyboard.on('keycombomatch', (combo, event) => 
+            {
                 if (combo === firstCombo) 
                 { 
                     firstAns = true;
@@ -210,7 +211,8 @@ class PlayTwo extends Phaser.Scene
             });
 
             // you can type this one as slow as you want
-            let secondCombo = this.input.keyboard.createCombo('towel', {
+            let secondCombo = this.input.keyboard.createCombo('towel', 
+            {
                 resetOnWrongKey: true,  // if they press the wrong key is the combo reset?
                 maxKeyDelay: 0,         // max delay (ms) between each key press (0 = disabled)
                 resetOnMatch: true,     // if matched before, does pressing first key of combo reset?
@@ -325,7 +327,8 @@ class PlayTwo extends Phaser.Scene
             });
 
             // you can type this one as slow as you want
-            let thirdCombo = this.input.keyboard.createCombo('blouse', {
+            let thirdCombo = this.input.keyboard.createCombo('blouse', 
+            {
                 resetOnWrongKey: true,  // if they press the wrong key is the combo reset?
                 maxKeyDelay: 0,         // max delay (ms) between each key press (0 = disabled)
                 resetOnMatch: true,     // if matched before, does pressing first key of combo reset?

@@ -68,7 +68,13 @@ let secondAnsFin    = false;
 let thirdAnsFin     = false;
 let firstAns        = false;
 let secondAns       = false;
-let thirdAns       = false;
+let thirdAns        = false;
+
+let findFirst       = false;
+let findSecond      = false;
+let findThird       = false;
+
+let timerEnd        = false;
 
 // reserve keyboard variables
 let keyW, keyA, keyS, keyD, keyY, keyU, keyI, keyO, keyP, keyF;

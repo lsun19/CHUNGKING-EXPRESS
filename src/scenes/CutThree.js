@@ -94,7 +94,7 @@ class CutThree extends Phaser.Scene
 
         nextButton.once('pointerdown', () => 
         {
-            this.scene.start('playScene2');
+            this.scene.start('playScene3');
         });
  
     }
