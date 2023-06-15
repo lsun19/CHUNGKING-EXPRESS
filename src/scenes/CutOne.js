@@ -94,7 +94,7 @@ class CutOne extends Phaser.Scene
 
         nextButton.once('pointerdown', () => 
         {
-            this.scene.start('playScene1');
+            this.scene.start('playScene2');
         });
  
     }

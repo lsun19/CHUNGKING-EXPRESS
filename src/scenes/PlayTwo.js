@@ -27,6 +27,19 @@ class PlayTwo extends Phaser.Scene
 
         if(!firstAnsFin)
         {
+            if(FirstClear)
+            {
+                const soapConfig = 
+                {
+                    key: 'soap',
+                    x: game.config.width/2,
+                    y: game.config.height/2
+                };
+
+                // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/game%20objects/sprites/create%20from%20config.js
+                this.soap = this.make.sprite(soapConfig).setAlpha(0.05);
+            }
+
             /****************************** text wipe fx for text to simulate protagonist's inner conversation ******************************/
             // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/fx/wipe/reveal%20text.js
             let line = 0;
@@ -125,6 +138,19 @@ class PlayTwo extends Phaser.Scene
 
         if(firstAnsFin && !secondAnsFin)
         {
+            if(FirstClear)
+            {
+                const towelConfig = 
+                {
+                    key: 'towel',
+                    x: game.config.width/2,
+                    y: game.config.height/2
+                };
+
+                // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/game%20objects/sprites/create%20from%20config.js
+                this.towel = this.make.sprite(towelConfig).setAlpha(0.05);
+            }
+
             /****************************** text wipe fx for text to simulate protagonist's inner conversation ******************************/
             // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/fx/wipe/reveal%20text.js
             let line = 0;
@@ -220,6 +246,19 @@ class PlayTwo extends Phaser.Scene
 
         if(firstAnsFin && secondAnsFin && !thirdAnsFin)
         {
+            if(FirstClear)
+            {
+                const blouseConfig = 
+                {
+                    key: 'blouse',
+                    x: game.config.width/2,
+                    y: game.config.height/2
+                };
+
+                // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/game%20objects/sprites/create%20from%20config.js
+                this.blouse = this.make.sprite(blouseConfig).setAlpha(0.05);
+            }
+
             /****************************** text wipe fx for text to simulate protagonist's inner conversation ******************************/
             // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/fx/wipe/reveal%20text.js
             let line = 0;

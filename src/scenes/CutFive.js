@@ -79,6 +79,7 @@ class CutFive extends Phaser.Scene
 
         nextButton.once('pointerdown', () => 
         {
+            FirstClear  = true;
             this.scene.start('menuScene');
         });
  

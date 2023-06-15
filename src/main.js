@@ -32,6 +32,14 @@
         - tween manager     : Applying tween effects on title arts, achievement text, etc.
         - timers            : Using timers for switch game rounds in all play scenes
         - tilemaps          : Integrating tilemaps in the scene playThree with functioning collision
+
+    Grade "tilt"
+        - Genral Design     : The game's mechanics and art seamlessly harmonize with the movie's theme creating an immersive experience
+        - Various Cutscenes : The four cutscene conversations effectively weaves a clear storyline based on the movie
+        - Menu Art          : Particle effect driven menu art (i.e., drawing chinese characters one stroke at a time)
+        - Text-Based Quiz   : The second playscene incorporates a text-entry game that mirrors the protagonist's tumultuous inner world.
+        - Achievement System: A system tracking all the player's achievement throughout the gameplay
+        - First Clear Bonus : Activate extra hint after going through the game for the first time
 */
 
 'use strict';
@@ -97,6 +105,8 @@ let GetAchvmtTwo    = false;
 let GetAchvmtThree  = false;
 let GetAchvmtFour   = false;
 let GetAchvmtFive   = false;
+
+let FirstClear      = false;
 
 // reserve keyboard variables
 let keyW, keyA, keyS, keyD, keyY, keyU, keyI, keyO, keyP, keyF;

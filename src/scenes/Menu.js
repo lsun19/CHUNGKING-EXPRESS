@@ -16,6 +16,9 @@ class Menu extends Phaser.Scene {
         this.load.image('ex', 'img/ex.png')
         this.load.image('foodStand0', 'img/foodStand0.png');
         this.load.image('trophy', 'img/trophy.png');
+        this.load.image('soap', 'img/soap.png');
+        this.load.image('towel', 'img/towel.png');
+        this.load.image('blouse', 'img/blouse.png');
 
         // load font
         this.load.bitmapFont('Piacevoli', 'font/Piacevoli_Font.png', 'font/Piacevoli_Font.xml');
