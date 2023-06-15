@@ -13,8 +13,9 @@ class Menu extends Phaser.Scene {
         this.load.image('dialogbox', 'img/dialogbox.png');
         this.load.image('cop', 'img/cop.png');
         this.load.image('faye', 'img/faye.png');
+        this.load.image('ex', 'img/ex.png')
         this.load.image('foodStand0', 'img/foodStand0.png');
-        
+        this.load.image('trophy', 'img/trophy.png');
 
         // load font
         this.load.bitmapFont('Piacevoli', 'font/Piacevoli_Font.png', 'font/Piacevoli_Font.xml');
@@ -23,6 +24,7 @@ class Menu extends Phaser.Scene {
         this.load.json('dialog1', 'json/dialog1.json');
         this.load.json('dialog2', 'json/dialog2.json');
         this.load.json('dialog3', 'json/dialog3.json');
+        this.load.json('dialog4', 'json/dialog4.json');
 
         // load audio
         this.load.audio('backgroundMusic', 'audio/California Dreamin.wav');

@@ -63,8 +63,9 @@ class CutThree extends Phaser.Scene
         this.nextText = this.add.bitmapText(this.NEXT_X, this.NEXT_Y, this.DBOX_FONT, '', this.TEXT_SIZE);
 
         // ready the character dialog images offscreen
-        this.cop = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'cop').setOrigin(0, 1);
+        this.cop  = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'cop').setOrigin(0, 1);
         this.faye = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'faye').setOrigin(0, 1);
+        this.ex   = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'ex').setOrigin(0, 1);
 
         // input
         cursors = this.input.keyboard.createCursorKeys();

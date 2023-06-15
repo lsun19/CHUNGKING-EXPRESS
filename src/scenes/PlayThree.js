@@ -15,7 +15,12 @@ class PlayThree extends Phaser.Scene
         this.load.image('tilesetImage', 'tile/tileset.png')
         this.load.tilemapTiledJSON('tilemapJSON', 'tile/area01.json')
 
-        this.load.atlas('faye_atlas', 'atlas/FayeSprite.png', 'atlas/FayeSprite.json');
+        this.load.atlas('faye_atlas', 'atlas/FayeSprite.png', 'atlas/FayeSprite.json')
+
+        this.load.image('bear1', 'img/bear1.png')
+        this.load.image('bear2', 'img/bear2.png')
+        this.load.image('rack1', 'img/clothRack1.png')
+        this.load.image('rack2', 'img/clothRack2.png')
 
         this.load.spritesheet('fishTank', 'img/fishTank.png', 
         {
@@ -85,6 +90,38 @@ class PlayThree extends Phaser.Scene
 
         this.fishTank = this.physics.add.sprite(216, 175, 'fishTank', 0)
 
+        this.anims.create
+        ({
+            key: 'fish',
+            frameRate: 8,
+            repeat: -1,
+            frames: this.anims.generateFrameNumbers('fishTank', 
+            {
+                start: 0,
+                end: 5
+            })
+        })
+
+        if(findFirst)
+        {
+            this.fishTank.play('fish');
+        }
+
+
+        this.bear = this.physics.add.sprite(248, 77, 'bear1', 0)
+
+        if(findSecond)
+        {
+            this.newBear = this.physics.add.sprite(248, 77, 'bear2', 0)
+        }
+
+        this.rack = this.physics.add.sprite(328, 116, 'rack1', 0)
+
+        if(findThird)
+        {
+            this.newBear = this.physics.add.sprite(328, 116, 'rack2', 0)
+        }
+
         /************************************************************  set up timer ************************************************************/
         this.countdown = this.add.text(20, 12);
 
@@ -135,10 +172,90 @@ class PlayThree extends Phaser.Scene
 
         if(timerEnd)
         {
-            this.scene.restart();
-            timerEnd = false;
-        }
+            if (purchaseDate>6)
+            {
+                if(findFirst && findSecond && findThird)
+                {
+                    let achvmtThree = this.add.bitmapText(189, 272, 'Piacevoli', 'ACHIEVEMENT UNLOCKED: Sleepwalking', 16).setOrigin(0.5).setTint(0x81007f);
+                    GetAchvmtFour = true;
+                    this.tweens.add
+                    ({
+                        targets: achvmtThree,
+                        alphaTopLeft: { value: 1, duration: 4000, ease: 'Power1' },
+                        alphaBottomRight: { value: 1, duration: 4000, ease: 'Power1' },
+                        alphaBottomLeft: { value: 1, duration: 4000, ease: 'Power1'},
+                        yoyo: false,
+                        loop: 0
+                    });
+                }
 
+                this.clock = this.time.delayedCall(5000, () => 
+                {
+                    this.scene.start('cutScene4');
+                    
+                }, null, this);
+            }
+            else
+            {
+
+                this.clock = this.time.delayedCall(2000, () => 
+                {
+                    this.scene.restart();
+                    timerEnd  = false;
+                }, null, this);
+            }
+        }
+        else
+        {
+            if (Math.abs(this.faye.x - this.fishTank.x) < 70 
+            &&  Math.abs(this.faye.y - this.fishTank.y) < 70 
+            && Phaser.Input.Keyboard.JustDown(this.cursors.space)
+            && !findFirst)
+            {
+                this.fishTank.play('fish');
+                findFirst = true;
+
+                this.clock = this.time.delayedCall(1000, () => 
+                {
+                    purchaseDate++;
+                    this.scene.restart();
+                    timerEnd  = false;
+                }, null, this);
+            }
+    
+            if (Math.abs(this.faye.x - this.bear.x) < 20 
+            &&  Math.abs(this.faye.y - this.bear.y) < 20 
+            && Phaser.Input.Keyboard.JustDown(this.cursors.space)
+            && !findSecond)
+            {
+                this.bear.destroy();
+                findSecond = true;
+
+                this.clock = this.time.delayedCall(1000, () => 
+                {
+                    purchaseDate++;
+                    this.scene.restart();
+                    timerEnd  = false;
+                }, null, this);
+            }
+    
+            if (Math.abs(this.faye.x - this.rack.x) < 20 
+            &&  Math.abs(this.faye.y - this.rack.y) < 20 
+            && Phaser.Input.Keyboard.JustDown(this.cursors.space)
+            && !findThird)
+            {
+                this.rack.destroy();
+                findThird = true;
+
+                this.clock = this.time.delayedCall(1000, () => 
+                {
+                    purchaseDate++;
+                    this.scene.restart();
+                    timerEnd  = false;
+                }, null, this);
+            }
+
+        }
 
     }
     

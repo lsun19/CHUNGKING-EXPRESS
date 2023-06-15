@@ -40,6 +40,8 @@ class CutTwo extends Phaser.Scene
 
     create() 
     {
+        purchaseDate = 1;
+
         // menu art
         const menuConfig = 
         {

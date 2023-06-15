@@ -111,26 +111,6 @@ class PlayTwo extends Phaser.Scene
                 }
             });
 
-            // // menu art
-            // let menuConfig = 
-            // {
-            //     key: 'foodStand0',
-            //     x: game.config.width/2,
-            //     y: game.config.height/2
-            // };
-
-            // // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/game%20objects/sprites/create%20from%20config.js
-            // let sea = this.make.sprite(menuConfig).setAlpha(0);
-
-            // this.tweens.add({
-            //     targets: sea,
-            //     alphaTopLeft: { value: 1, duration: 5000, ease: 'Power1' },
-            //     alphaBottomRight: { value: 1, duration: 10000, ease: 'Power1' },
-            //     alphaBottomLeft: { value: 1, duration: 5000, ease: 'Power1', delay: 5000 },
-            //     yoyo: true,
-            //     loop: 0
-
-            // });
 
             this.clock = this.time.delayedCall(15000, () => 
             {
@@ -228,27 +208,6 @@ class PlayTwo extends Phaser.Scene
                 }
             });
 
-            // // menu art
-            // let menuConfig = 
-            // {
-            //     key: 'foodStand0',
-            //     x: game.config.width/2,
-            //     y: game.config.height/2
-            // };
-
-            // // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/game%20objects/sprites/create%20from%20config.js
-            // let sea = this.make.sprite(menuConfig).setAlpha(0);
-
-            // this.tweens.add({
-            //     targets: sea,
-            //     alphaTopLeft: { value: 1, duration: 5000, ease: 'Power1' },
-            //     alphaBottomRight: { value: 1, duration: 10000, ease: 'Power1' },
-            //     alphaBottomLeft: { value: 1, duration: 5000, ease: 'Power1', delay: 5000 },
-            //     yoyo: true,
-            //     loop: 0
-
-            // });
-
             this.clock = this.time.delayedCall(15000, () => 
             {
                 typeTimeOut = true;
@@ -344,27 +303,6 @@ class PlayTwo extends Phaser.Scene
                 }
             });
 
-            // // menu art
-            // let menuConfig = 
-            // {
-            //     key: 'foodStand0',
-            //     x: game.config.width/2,
-            //     y: game.config.height/2
-            // };
-
-            // // see: https://github.com/photonstorm/phaser3-examples/blob/master/public/src/game%20objects/sprites/create%20from%20config.js
-            // let sea = this.make.sprite(menuConfig).setAlpha(0);
-
-            // this.tweens.add({
-            //     targets: sea,
-            //     alphaTopLeft: { value: 1, duration: 5000, ease: 'Power1' },
-            //     alphaBottomRight: { value: 1, duration: 10000, ease: 'Power1' },
-            //     alphaBottomLeft: { value: 1, duration: 5000, ease: 'Power1', delay: 5000 },
-            //     yoyo: true,
-            //     loop: 0
-
-            // });
-
             this.clock = this.time.delayedCall(15000, () => 
             {
                 typeTimeOut = true;
@@ -395,6 +333,7 @@ class PlayTwo extends Phaser.Scene
                 if(firstAns && secondAns && thirdAns)
                 {
                     let achvmtThree = this.add.bitmapText(centerX, hght - textSpacer, 'Piacevoli', 'ACHIEVEMENT UNLOCKED: sad boi', 40).setOrigin(0.5).setTint(0x81007f);
+                    GetAchvmtThree = true;
                     this.tweens.add
                     ({
                         targets: achvmtThree,

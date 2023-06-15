@@ -1,0 +1,99 @@
+[
+	[
+		{	
+			"speaker" : "cop",
+			"dialog" : "Faye? What are you doing here?",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "I came to buy goldfish.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Someone around here sell goldfish?",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "No.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Then why come to buy goldfish? You buying or selling?",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "What? No... I mean, I'm buying. Stop it! I forget everything when I'm scared.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Why are you scared?",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "I got scared when I saw you here. I'm going now.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "You said you were going. Well?",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "I can't move my legs. I'd go if I could.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "You have a cramp?",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "I don't know. It's never happened before.",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Maybe you should come in and sit down. (messaging...) Better?",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "Can I go now?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Stay a while longer. I'll put on some music. (The CD player started playing the California Dreamin...)",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "You like this song too?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Not really. My girlfriend liked it.",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "faye",
+			"dialog" : "She really liked this song?",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "cop",
+			"dialog" : "Yes.",
+			"newSpeaker" : "true"
+		}
+	]
+]
